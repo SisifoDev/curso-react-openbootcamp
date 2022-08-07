@@ -23,10 +23,11 @@ const TaskComponent = ({ task }) => {
     <div className="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
       <p className="text-slate-900 dark:text-white mt-2 text-xl">{title}</p>
       <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-        Descripción: {description}
+        Descripción: <span className="ml-6">{description}</span>
       </p>
       <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm ">
-        Estado: {completed ? "COMPLETED" : "PENDING"}
+        Estado:{" "}
+        <span className="ml-6">{completed ? "COMPLETED" : "PENDING"}</span>
       </p>
       <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
         Prioridad:
@@ -39,10 +40,12 @@ const TaskComponent = ({ task }) => {
         </span>
       </p>
       <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-        Fecha de creación: {created_at.toLocaleString()}
+        Fecha de creación:{" "}
+        <span className="ml-6">{created_at.toLocaleString()}</span>
       </p>
       <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-        Feacha de actualización: {updated_at.toLocaleString()}
+        Feacha de actualización:{" "}
+        <span className="ml-6">{updated_at.toLocaleString()}</span>
       </p>
     </div>
   );

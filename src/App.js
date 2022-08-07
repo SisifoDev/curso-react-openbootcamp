@@ -1,22 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import TaskListComponent from "./components/container/task_list";
+// Greeting from "./components/pure/greeting";
 
 function App() {
+  //return <Greeting name="Héctor Manuel" />;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="bg-white dark:bg-slate-900 h-screen">
+      <header className="container mx-auto px-4">
+        <TaskListComponent />
       </header>
     </div>
   );

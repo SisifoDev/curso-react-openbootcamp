@@ -1,6 +1,7 @@
 import React from "react";
 import { LEVELS } from "../../models/levels.enum";
 import { Task } from "../../models/task.class";
+import TaskForm from "../pure/forms/taskForm";
 import TaskComponent from "../pure/task";
 
 const TaskListComponent = () => {
@@ -48,9 +49,10 @@ const TaskListComponent = () => {
   return (
     <div className="container">
       <div>
-        <h1 className="text-slate-900 dark:text-white text-3xl text-center py-24">
+        <h1 className="text-slate-900 dark:text-white text-3xl text-center py-8">
           Your Tasks
         </h1>
+        <TaskForm />
       </div>
       <div className="flex flex-row flex-wrap gap-5 justify-center">
         {tasks.map((task) => (
